@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>タスクの削除</h1>
+    <form action="" method="post"> {% csrf_token %}
+        <p>{{task}}</p>
+        <input type="submit" value="delete">
+    </form>
+</body>
+
+</html>
