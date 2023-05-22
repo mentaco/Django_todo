@@ -1,17 +1,13 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="ja">
+{% extends 'todo/base.html' %}
 
-<head>
-    <meta charset="utf-8">
-</head>
+{% block header %}
+<h1>タスクの詳細</h1>
+{% endblock header %}
 
-<body>
-    <dev>
-        <h2>{{task.title}}</h2>
-        <p>{{task.deadline}}</p>
-        <p>{{task.description}}</p>
-    </dev>
-</body>
-
-</html>
+{% block content %}
+<dev>
+    <h2>{{task.title}}</h2>
+    <p>{{task.deadline}}</p>
+    <p>{{task.description}}</p>
+</dev>
+{% endblock content %}
