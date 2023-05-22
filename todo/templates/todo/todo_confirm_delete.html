@@ -1,17 +1,12 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="ja">
+{% extends 'todo/base.html' %}
 
-<head>
-    <meta charset="utf-8">
-</head>
+{% block header %}
+<h1>タスクの削除</h1>
+{% endblock header %}
 
-<body>
-    <h1>タスクの削除</h1>
-    <form action="" method="post"> {% csrf_token %}
-        <p>{{task}}</p>
-        <input type="submit" value="delete">
-    </form>
-</body>
-
-</html>
+{% block content %}
+<form action="" method="post"> {% csrf_token %}
+    <p>{{task}}</p>
+    <input type="submit" value="delete">
+</form>
+{% endblock content %}

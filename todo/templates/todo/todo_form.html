@@ -1,18 +1,14 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="ja">
+{% extends 'todo/base.html' %}
 
-<head>
-    <meta charset="utf-8">
-</head>
+{% block header %}
+<h1>タスクの作成</h1>
+{% endblock header %}
 
-<body>
-    <form action="", method="post"> {% csrf_token %}
-        <table>
-            {{ form.as_table}}
-        </table>
-        <input type="submit" value="送信">
-    </form>
-</body>
-
-</html>
+{% block content %}
+<form action="" , method="post"> {% csrf_token %}
+    <table>
+        {{ form.as_table}}
+    </table>
+    <input type="submit" value="送信">
+</form>
+{% endblock content %}

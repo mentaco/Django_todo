@@ -1,8 +1,10 @@
 {% extends 'todo/base.html' %}
 
-{% block content %}
-<h1>Todo List</h1>
+{% block header %}
+<h1>タスク一覧</h1>
+{% endblock header %}
 
+{% block content %}
 <p><a href="{% url 'create' %}">新規作成</a></p>
 <table>
     <thead>
