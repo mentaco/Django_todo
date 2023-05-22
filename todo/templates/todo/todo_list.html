@@ -8,24 +8,24 @@
 
 {% block content %}
 <p><a href="{% url 'create' %}">新規作成</a></p>
-<table class="table">
+<table>
     <thead>
         <tr>
-            <th scope="col">Title</th>
-            <th scope="col">Deadline</th>
-            <th scope="col">Description</th>
-            <th scope="col"></th>
-            <th scope="col"></th>
+            <th scope="col" class="headlines">Title</th>
+            <th scope="col" class="headlines">Deadline</th>
+            <th scope="col" class="headlines">Description</th>
+            <th scope="col" class="headlines"></th>
+            <th scope="col" class="headlines"></th>
         </tr>
     </thead>
     <tbody>
         {% for task in tasks %}
         <tr>
-            <td>{{ task.title }}</td>
-            <td>{{ task.deadline }}</td>
-            <td><a href="{% url 'detail' task.pk %}">詳細</a></td>
-            <td><a href="{% url 'update' task.pk %}">編集</a></td>
-            <td><a href="{% url 'delete' task.pk %}">削除</a></td>
+            <td class="items">{{ task.title }}</td>
+            <td class="items">{{ task.deadline }}</td>
+            <td class="items"><a href="{% url 'detail' task.pk %}">詳細</a></td>
+            <td class="options"><a href="{% url 'update' task.pk %}">編集</a></td>
+            <td class="options"><a href="{% url 'delete' task.pk %}">削除</a></td>
         </tr>
         {% endfor %}
     </tbody>
