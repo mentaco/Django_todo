@@ -1,17 +1,21 @@
 {% extends 'todo/base.html' %}
+{% load static %}
 
 {% block header %}
+<link rel="stylesheet" href="{% static 'todo/todo_list.css' %}">
 <h1>タスク一覧</h1>
 {% endblock header %}
 
 {% block content %}
 <p><a href="{% url 'create' %}">新規作成</a></p>
-<table>
+<table class="table">
     <thead>
         <tr>
             <th scope="col">Title</th>
             <th scope="col">Deadline</th>
             <th scope="col">Description</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
         </tr>
     </thead>
     <tbody>
