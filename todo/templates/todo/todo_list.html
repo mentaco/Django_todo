@@ -1,6 +1,8 @@
 {% extends 'todo/base.html' %}
+{% load static %}
 
 {% block header %}
+<link rel="stylesheet" href="{% static 'todo/todo_list.css' %}">
 <h1>タスク一覧</h1>
 {% endblock header %}
 
@@ -9,19 +11,21 @@
 <table>
     <thead>
         <tr>
-            <th scope="col">Title</th>
-            <th scope="col">Deadline</th>
-            <th scope="col">Description</th>
+            <th scope="col" class="headlines">Title</th>
+            <th scope="col" class="headlines">Deadline</th>
+            <th scope="col" class="headlines">Description</th>
+            <th scope="col" class="headlines"></th>
+            <th scope="col" class="headlines"></th>
         </tr>
     </thead>
     <tbody>
         {% for task in tasks %}
         <tr>
-            <td>{{ task.title }}</td>
-            <td>{{ task.deadline }}</td>
-            <td><a href="{% url 'detail' task.pk %}">詳細</a></td>
-            <td><a href="{% url 'update' task.pk %}">編集</a></td>
-            <td><a href="{% url 'delete' task.pk %}">削除</a></td>
+            <td class="items">{{ task.title }}</td>
+            <td class="items">{{ task.deadline }}</td>
+            <td class="items"><a href="{% url 'detail' task.pk %}">詳細</a></td>
+            <td class="options"><a href="{% url 'update' task.pk %}">編集</a></td>
+            <td class="options"><a href="{% url 'delete' task.pk %}">削除</a></td>
         </tr>
         {% endfor %}
     </tbody>
