@@ -1,0 +1,13 @@
+h1{
+    margin-bottom: 2em;
+}
+
+form{
+    margin-left: 3em;
+    font-size: large;
+}
+
+.create_button{
+    margin-top: 2.5em;
+    margin-left: 1.5em;
+}
