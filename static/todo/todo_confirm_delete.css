@@ -1,0 +1,19 @@
+h1{
+    margin-bottom: 2em;
+}
+
+form{
+    margin-left: 3em;
+}
+
+p{
+    font-size: larger;
+}
+
+.task_detail{
+    margin-bottom: 3em;
+}
+
+.delete_button{
+    margin-left: 1.6em;
+}

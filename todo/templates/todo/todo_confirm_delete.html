@@ -1,12 +1,21 @@
 {% extends 'todo/base.html' %}
+{% load static %}
 
 {% block header %}
+<link rel="stylesheet" href="{% static 'todo/todo_confirm_delete.css' %}">
 <h1>タスクの削除</h1>
 {% endblock header %}
 
 {% block content %}
 <form action="" method="post"> {% csrf_token %}
-    <p>{{task}}</p>
-    <input type="submit" value="delete">
+    <div class="task_detail">
+        <h2>{{ task.title }}</h2>
+        <p> {{ task.deadline }}</p>
+        <p> {{ task.description }}</p>
+    </div>
+
+    <p>このタスクを削除しますか？</p>
+    <a class="back_button" href="{% url 'list' %}" role="button">戻る</a>
+    <input class="delete_button" type="submit" value="削除">
 </form>
 {% endblock content %}
