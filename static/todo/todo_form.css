@@ -7,7 +7,16 @@ form{
     font-size: large;
 }
 
+section{
+    margin-bottom: 2em;
+}
+
+.back_button{
+    margin-top: 3em;
+    margin-left: 1.2em;
+}
+
 .create_button{
-    margin-top: 2.5em;
-    margin-left: 1.5em;
+    margin-top: 3em;
+    margin-left: 1.6em;
 }

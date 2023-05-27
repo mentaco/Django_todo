@@ -9,8 +9,9 @@
 {% block content %}
 <form action="" , method="post"> {% csrf_token %}
     <table>
-        {{ form.as_table}}
+        {{ form.as_table }}
     </table>
+    <a class="back_button" href="{% url 'list' %}" role="button">戻る</a>
     <input class="create_button" type="submit" value="作成">
 </form>
 {% endblock content %}
