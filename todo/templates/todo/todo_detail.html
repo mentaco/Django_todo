@@ -1,13 +1,15 @@
 {% extends 'todo/base.html' %}
+{% load static %}
 
 {% block header %}
+<link rel="stylesheet" href="{% static 'todo/todo_detail.css' %}">
 <h1>タスクの詳細</h1>
 {% endblock header %}
 
 {% block content %}
-<dev>
+<section class="container">
     <h2>{{task.title}}</h2>
     <p>{{task.deadline}}</p>
     <p>{{task.description}}</p>
-</dev>
+</section>
 {% endblock content %}
