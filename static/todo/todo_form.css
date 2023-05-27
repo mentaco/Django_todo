@@ -1,0 +1,22 @@
+h1{
+    margin-bottom: 2em;
+}
+
+form{
+    margin-left: 3em;
+    font-size: large;
+}
+
+section{
+    margin-bottom: 2em;
+}
+
+.back_button{
+    margin-top: 3em;
+    margin-left: 1.2em;
+}
+
+.create_button{
+    margin-top: 3em;
+    margin-left: 1.6em;
+}
